@@ -1,0 +1,11 @@
+version: "3"
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.4
+    container_name: meilisearch
+    ports:
+      - 8800:7700
+    volumes:
+      - ./meili_data:/meili_data
+    environment:
+      - MEILI_ENV=development
